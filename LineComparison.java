@@ -13,7 +13,7 @@ public class LineComparison {
         int x2 = s.nextInt();
    	int y2 = s.nextInt();
         
-        double lengthL1 = Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2);
+        double lengthL1 = (double) Math.sqrt(Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2));
         System.out.println("Length of Line 1 = " + lengthL1 );
 	
         System.out.print("Enter x y conrdinate of source point of line 2, L2 : s1,d1  \n"); 
@@ -23,7 +23,7 @@ public class LineComparison {
         int s2 = s.nextInt();
    	int d2 = s.nextInt();
          
-        double lengthL2 = Math.pow(s2-s1, 2) + Math.pow(d2-d1, 2);
+        double lengthL2 =(double) Math.sqrt(Math.pow(s2-s1, 2) + Math.pow(d2-d1, 2));
         System.out.println("Length of Line 2 = " + lengthL2 );   
         
         boolean lineMatch=false;
