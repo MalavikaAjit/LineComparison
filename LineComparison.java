@@ -13,7 +13,7 @@ public class LineComparison {
         int x2 = s.nextInt();
    	int y2 = s.nextInt();
         
-       double lengthL1 = (double) Math.sqrt(Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2));
+       Double lengthL1 = (double) Math.sqrt(Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2));
         System.out.println("Length of Line 1 = " + lengthL1 );
      }
  
