@@ -1,4 +1,5 @@
 import java.util.*;
+import java.lang.*;
 
 public class LineComparison {
      
@@ -13,7 +14,7 @@ public class LineComparison {
         int x2 = s.nextInt();
    	int y2 = s.nextInt();
         
-        Double lengthL1 = (double) Math.sqrt(Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2));
+        Double lengthL1 =(double) Math.sqrt( Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2));
         System.out.println("Length of Line 1 = " + lengthL1 );
 	
         System.out.print("Enter x y conrdinate of source point of line 2, L2 : s1,d1  \n"); 
@@ -23,21 +24,24 @@ public class LineComparison {
         int s2 = s.nextInt();
    	int d2 = s.nextInt();
          
-        Double lengthL2 =(double) Math.sqrt(Math.pow(s2-s1, 2) + Math.pow(d2-d1, 2));
+        Double lengthL2 =(double) Math.sqrt( Math.pow(s2-s1, 2) + Math.pow(d2-d1, 2));
         System.out.println("Length of Line 2 = " + lengthL2 );   
         
-        boolean lineMatch=false;
-        if(lengthL1 == lengthL2)
-             lineMatch=true;
-
-        String message;
-        if(lineMatch)
-               message = "lengthL1 and lengthL2 are equal";
-        else
-               message = "lengthL1 and lengthL2 are not equal";
-
-        System.out.println("The length of two line L1 and L2 are "+ lengthL1 + " and " + lengthL2 + message);     
-
-      }
-
- }
+         int comparison = lengthL1.compareTo( lengthL2);
+		switch(comparison){
+			case 1:
+				System.out.println("Line 1 is greater than Line 2");
+				break;
+			case 0:
+				System.out.println("Line 1 and Line 2 are equal");
+				break;
+			case -1:
+				System.out.println("Line 2 is greaterthan Line 1");
+				break;
+			default:
+				System.out.println("invalid");
+				break; 
+            } 
+         }
+      
+     }
